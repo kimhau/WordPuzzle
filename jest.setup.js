@@ -1,6 +1,6 @@
-import 'whatwg-fetch';
-import 'react-native-gesture-handler/jestSetup';
 import '@testing-library/jest-native/extend-expect';
+import 'react-native-gesture-handler/jestSetup';
+import 'whatwg-fetch';
 
 jest.mock('redux-persist', () => {
   const real = jest.requireActual('redux-persist');
@@ -30,3 +30,21 @@ jest.mock('react-i18next', () => ({
     init: jest.fn(),
   },
 }));
+
+//mock react-native-share
+jest.mock('react-native-share', () => {
+  return {
+    open: jest.fn(),
+  };
+});
+
+import { NativeModules } from 'react-native';
+
+NativeModules.ViewShot = {
+  captureRef: jest.fn(),
+};
+
+jest.mock('react-native-view-shot', () => {
+  const View = require('react-native').View;
+  return ({ children }) => <View>{children}</View>;
+});

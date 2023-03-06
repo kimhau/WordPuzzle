@@ -68,5 +68,7 @@ const store = configureStore({
 const persistor = persistStore(store);
 
 setupListeners(store.dispatch);
+export type RootState = ReturnType<typeof reducers>;
+export type AppStore = ReturnType<typeof configureStore>;
 
 export { store, persistor };

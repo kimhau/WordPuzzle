@@ -78,6 +78,7 @@ const Home = ({ navigation }: ApplicationScreenProps) => {
         </TouchableOpacity>
       </View>
       <TouchableOpacity
+        testID="start-button"
         disabled={!selectedCategory}
         style={[Common.button.rounded]}
         onPress={handleStartPress}

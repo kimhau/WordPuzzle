@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Congratz renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      {
+        "flexGrow": 1,
+        "justifyContent": "space-around",
+      },
+    ]
+  }
+>
+  <View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#212529",
+              "fontSize": 40,
+              "fontWeight": "bold",
+            },
+            {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        title
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#212529",
+              "fontSize": 32,
+              "fontWeight": "bold",
+            },
+            {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        desc
+      </Text>
+    </View>
+    <View>
+      <RNGestureHandlerButton
+        collapsable={false}
+        delayLongPress={600}
+        enabled={true}
+        exclusive={true}
+        handlerTag={1}
+        handlerType="NativeViewGestureHandler"
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+        touchSoundDisabled={false}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#E14032",
+              "borderRadius": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "marginBottom": 10,
+              "marginHorizontal": 30,
+              "opacity": 1,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "textAlign": "center",
+              }
+            }
+          >
+            next
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+      <RNGestureHandlerButton
+        collapsable={false}
+        delayLongPress={600}
+        enabled={true}
+        exclusive={true}
+        handlerTag={2}
+        handlerType="NativeViewGestureHandler"
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+        touchSoundDisabled={false}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#E14032",
+              "borderRadius": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "marginHorizontal": 30,
+              "opacity": 1,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "textAlign": "center",
+              }
+            }
+          >
+            share
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+    </View>
+  </View>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={false}
+  />
+</RCTSafeAreaView>
+`;

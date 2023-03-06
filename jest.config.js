@@ -9,11 +9,11 @@ module.exports = {
     'node_modules/(?!(jest-)?react-native|@react-native|@react-native-community|@react-navigation)',
   ],
   collectCoverageFrom: [
-    '<rootDir>/src/Components/**/*.jsx',
-    '<rootDir>/src/App.jsx',
-    '<rootDir>/src/Components/**/*.tsx',
+    '<rootDir>/src/components/**/*.tsx',
     '<rootDir>/src/App.tsx',
+    '<rootDir>/src/screens/**/*.tsx',
   ],
+  // coveragePathIgnorePatterns: ['/mock/*'],
   coverageReporters: ['html', 'text', 'text-summary', 'cobertura'],
   testMatch: ['**/*.test.ts?(x)', '**/*.test.js?(x)'],
 };

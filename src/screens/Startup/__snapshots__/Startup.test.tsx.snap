@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Startup should render ActivityIndicator and Text components 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    size="large"
+    style={
+      [
+        {
+          "marginVertical": 60,
+        },
+      ]
+    }
+    testID="activity-indicator"
+  />
+  <Text
+    style={
+      {
+        "textAlign": "center",
+      }
+    }
+    testID="text"
+  >
+    welcome:title
+  </Text>
+</View>
+`;
