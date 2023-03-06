@@ -1,0 +1,10 @@
+{
+ "title": "Correct! +{{points}} pts Congratulations!",
+ "desc": "You have earn {{points}} points",
+ "next": "NEXT",
+ "share": "SHARE",
+ "modalTitle": "Tell us your name!",
+ "modalDesc": "We would love to record your score on our leaderboard.",
+ "submit": "SUBMIT",
+ "shareTitle": "Join me in Puzzle Game,  I scored {{points}} points!"
+}
