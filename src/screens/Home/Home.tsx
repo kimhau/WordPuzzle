@@ -33,63 +33,69 @@ const Home = ({ navigation }: ApplicationScreenProps) => {
   };
 
   return (
-    <SafeAreaView
-      style={[Layout.fill, Gutters.regularPadding, Layout.justifyContentAround]}
-    >
-      <Text style={[Fonts.titleRegular, Fonts.textCenter]}>
-        {t('wordPuzzle')}
-      </Text>
-      <View style={[Layout.column, Layout.gap, Gutters.smallPadding]}>
+    <SafeAreaView style={[Layout.fill]}>
+      <View
+        style={[
+          Layout.fill,
+          Gutters.regularPadding,
+          Layout.justifyContentAround,
+        ]}
+      >
+        <Text style={[Fonts.titleRegular, Fonts.textCenter]}>
+          {t('wordPuzzle')}
+        </Text>
+        <View style={[Layout.column, Layout.gap, Gutters.smallPadding]}>
+          <TouchableOpacity
+            style={[
+              Common.button.rounded,
+              {
+                backgroundColor:
+                  selectedCategory === 'animals' ? 'orange' : 'gray',
+              },
+            ]}
+            onPress={() => handleCategorySelect('animals')}
+          >
+            <Text style={Fonts.textCenter}>{t('animals')}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              Common.button.rounded,
+              {
+                backgroundColor:
+                  selectedCategory === 'countries' ? 'orange' : 'gray',
+              },
+            ]}
+            onPress={() => handleCategorySelect('countries')}
+          >
+            <Text style={Fonts.textCenter}>{t('countries')}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              Common.button.rounded,
+              {
+                backgroundColor:
+                  selectedCategory === 'chemicals' ? 'orange' : 'gray',
+              },
+            ]}
+            onPress={() => handleCategorySelect('chemicals')}
+          >
+            <Text style={Fonts.textCenter}>{t('chemicals')}</Text>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity
-          style={[
-            Common.button.rounded,
-            {
-              backgroundColor:
-                selectedCategory === 'animals' ? 'orange' : 'gray',
-            },
-          ]}
-          onPress={() => handleCategorySelect('animals')}
+          testID="start-button"
+          disabled={!selectedCategory}
+          style={[Common.button.rounded]}
+          onPress={handleStartPress}
         >
-          <Text style={Fonts.textCenter}>{t('animals')}</Text>
+          <Text style={Fonts.textBold}>{t('start')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            Common.button.rounded,
-            {
-              backgroundColor:
-                selectedCategory === 'countries' ? 'orange' : 'gray',
-            },
-          ]}
-          onPress={() => handleCategorySelect('countries')}
-        >
-          <Text style={Fonts.textCenter}>{t('countries')}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            Common.button.rounded,
-            {
-              backgroundColor:
-                selectedCategory === 'chemicals' ? 'orange' : 'gray',
-            },
-          ]}
-          onPress={() => handleCategorySelect('chemicals')}
-        >
-          <Text style={Fonts.textCenter}>{t('chemicals')}</Text>
+        <TouchableOpacity onPress={handleLeaderboardPress}>
+          <Text style={[Fonts.textRight, Fonts.textPrimary]}>
+            {t('go-to-leaderboard')}
+          </Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity
-        testID="start-button"
-        disabled={!selectedCategory}
-        style={[Common.button.rounded]}
-        onPress={handleStartPress}
-      >
-        <Text style={Fonts.textBold}>{t('start')}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={handleLeaderboardPress}>
-        <Text style={[Fonts.textRight, Fonts.textPrimary]}>
-          {t('go-to-leaderboard')}
-        </Text>
-      </TouchableOpacity>
     </SafeAreaView>
   );
 };
