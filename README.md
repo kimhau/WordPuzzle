@@ -47,7 +47,7 @@ npm install
                <li><code>user</code>: tracks the user's score and user name</li>
             </ul>
             <h2>Testing</h2>
-            <p>This app includes Jest unit tests for some of the screens. To run the tests, run the following command:</p>
+            <p>This app includes Jest unit tests for some of the screens. To run the tests and view coverage report, run the following command:</p>
             <pre><code>npm run test:report</code></pre>
             <h2>Acknowledgments</h2>
             <p>This app was built using the <a href="https://thecodingmachine.github.io/react-native-boilerplate/" target="_new">Coding Machine</a> boilerplate. Special thanks to the creators of the following libraries used in this app:</p>
