@@ -46,15 +46,25 @@ const Leaderboard = ({ navigation }) => {
     return users.sort((a, b) => parseInt(b.points) - parseInt(a.points));
   };
 
+  const leaderboardList = fakeUsers(10);
+  if (user.name && user.points) {
+    const me: User = {
+      name: user.name,
+      points: user.points.toString(),
+      id: '123',
+    };
+    leaderboardList.push(me);
+  }
+
   return (
     <SafeAreaView style={[Layout.fill]}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={[Fonts.textRegular, Fonts.textPrimary]}>{'< Back'}</Text>
       </TouchableOpacity>
       <FlatList
-        data={[...fakeUsers(10), user]}
+        data={leaderboardList}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item?.id}
         ListHeaderComponent={
           <View style={[Layout.row, Gutters.smallMargin]}>
             <Text
