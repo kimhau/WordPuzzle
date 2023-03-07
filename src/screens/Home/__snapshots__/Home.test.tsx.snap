@@ -7,58 +7,189 @@ exports[`Home renders correctly 1`] = `
       {
         "flex": 1,
       },
-      {
-        "padding": 30,
-      },
-      {
-        "justifyContent": "space-around",
-      },
     ]
   }
 >
-  <Text
-    style={
-      [
-        {
-          "color": "#212529",
-          "fontSize": 40,
-          "fontWeight": "bold",
-        },
-        {
-          "textAlign": "center",
-        },
-      ]
-    }
-  >
-    wordPuzzle
-  </Text>
   <View
     style={
       [
         {
-          "flexDirection": "column",
+          "flex": 1,
         },
         {
-          "gap": 8,
+          "padding": 30,
         },
         {
-          "padding": 20,
+          "justifyContent": "space-around",
         },
       ]
     }
   >
+    <Text
+      style={
+        [
+          {
+            "color": "#212529",
+            "fontSize": 40,
+            "fontWeight": "bold",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      wordPuzzle
+    </Text>
+    <View
+      style={
+        [
+          {
+            "flexDirection": "column",
+          },
+          {
+            "gap": 8,
+          },
+          {
+            "padding": 20,
+          },
+        ]
+      }
+    >
+      <RNGestureHandlerButton
+        collapsable={false}
+        delayLongPress={600}
+        enabled={true}
+        exclusive={true}
+        handlerTag={1}
+        handlerType="NativeViewGestureHandler"
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+        touchSoundDisabled={false}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "gray",
+              "borderRadius": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "textAlign": "center",
+              }
+            }
+          >
+            animals
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+      <RNGestureHandlerButton
+        collapsable={false}
+        delayLongPress={600}
+        enabled={true}
+        exclusive={true}
+        handlerTag={2}
+        handlerType="NativeViewGestureHandler"
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+        touchSoundDisabled={false}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "gray",
+              "borderRadius": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "textAlign": "center",
+              }
+            }
+          >
+            countries
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+      <RNGestureHandlerButton
+        collapsable={false}
+        delayLongPress={600}
+        enabled={true}
+        exclusive={true}
+        handlerTag={3}
+        handlerType="NativeViewGestureHandler"
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+        touchSoundDisabled={false}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "gray",
+              "borderRadius": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "textAlign": "center",
+              }
+            }
+          >
+            chemicals
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+    </View>
     <RNGestureHandlerButton
       collapsable={false}
       delayLongPress={600}
-      enabled={true}
+      enabled={false}
       exclusive={true}
-      handlerTag={1}
+      handlerTag={4}
       handlerType="NativeViewGestureHandler"
       onGestureEvent={[Function]}
       onGestureHandlerEvent={[Function]}
       onGestureHandlerStateChange={[Function]}
       onHandlerStateChange={[Function]}
       rippleColor={0}
+      testID="start-button"
       touchSoundDisabled={false}
     >
       <View
@@ -67,7 +198,7 @@ exports[`Home renders correctly 1`] = `
         style={
           {
             "alignItems": "center",
-            "backgroundColor": "gray",
+            "backgroundColor": "#E14032",
             "borderRadius": 10,
             "height": 40,
             "justifyContent": "center",
@@ -79,11 +210,11 @@ exports[`Home renders correctly 1`] = `
         <Text
           style={
             {
-              "textAlign": "center",
+              "fontWeight": "bold",
             }
           }
         >
-          animals
+          start
         </Text>
       </View>
     </RNGestureHandlerButton>
@@ -92,7 +223,7 @@ exports[`Home renders correctly 1`] = `
       delayLongPress={600}
       enabled={true}
       exclusive={true}
-      handlerTag={2}
+      handlerTag={5}
       handlerType="NativeViewGestureHandler"
       onGestureEvent={[Function]}
       onGestureHandlerEvent={[Function]}
@@ -106,147 +237,26 @@ exports[`Home renders correctly 1`] = `
         collapsable={false}
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "gray",
-            "borderRadius": 10,
-            "height": 40,
-            "justifyContent": "center",
             "opacity": 1,
-            "paddingHorizontal": 30,
           }
         }
       >
         <Text
           style={
-            {
-              "textAlign": "center",
-            }
+            [
+              {
+                "textAlign": "right",
+              },
+              {
+                "color": "#E14032",
+              },
+            ]
           }
         >
-          countries
-        </Text>
-      </View>
-    </RNGestureHandlerButton>
-    <RNGestureHandlerButton
-      collapsable={false}
-      delayLongPress={600}
-      enabled={true}
-      exclusive={true}
-      handlerTag={3}
-      handlerType="NativeViewGestureHandler"
-      onGestureEvent={[Function]}
-      onGestureHandlerEvent={[Function]}
-      onGestureHandlerStateChange={[Function]}
-      onHandlerStateChange={[Function]}
-      rippleColor={0}
-      touchSoundDisabled={false}
-    >
-      <View
-        accessible={true}
-        collapsable={false}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "gray",
-            "borderRadius": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingHorizontal": 30,
-          }
-        }
-      >
-        <Text
-          style={
-            {
-              "textAlign": "center",
-            }
-          }
-        >
-          chemicals
+          go-to-leaderboard
         </Text>
       </View>
     </RNGestureHandlerButton>
   </View>
-  <RNGestureHandlerButton
-    collapsable={false}
-    delayLongPress={600}
-    enabled={false}
-    exclusive={true}
-    handlerTag={4}
-    handlerType="NativeViewGestureHandler"
-    onGestureEvent={[Function]}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
-    onHandlerStateChange={[Function]}
-    rippleColor={0}
-    testID="start-button"
-    touchSoundDisabled={false}
-  >
-    <View
-      accessible={true}
-      collapsable={false}
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#E14032",
-          "borderRadius": 10,
-          "height": 40,
-          "justifyContent": "center",
-          "opacity": 1,
-          "paddingHorizontal": 30,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "fontWeight": "bold",
-          }
-        }
-      >
-        start
-      </Text>
-    </View>
-  </RNGestureHandlerButton>
-  <RNGestureHandlerButton
-    collapsable={false}
-    delayLongPress={600}
-    enabled={true}
-    exclusive={true}
-    handlerTag={5}
-    handlerType="NativeViewGestureHandler"
-    onGestureEvent={[Function]}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
-    onHandlerStateChange={[Function]}
-    rippleColor={0}
-    touchSoundDisabled={false}
-  >
-    <View
-      accessible={true}
-      collapsable={false}
-      style={
-        {
-          "opacity": 1,
-        }
-      }
-    >
-      <Text
-        style={
-          [
-            {
-              "textAlign": "right",
-            },
-            {
-              "color": "#E14032",
-            },
-          ]
-        }
-      >
-        go-to-leaderboard
-      </Text>
-    </View>
-  </RNGestureHandlerButton>
 </RCTSafeAreaView>
 `;
